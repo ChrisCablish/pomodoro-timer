@@ -2,6 +2,8 @@ const time = document.getElementById('time');
 const start = document.getElementById('start');
 const pause = document.getElementById('pause');
 const reset = document.getElementById('reset');
+const plus = document.getElementById('plus');
+const minus = document.getElementById('minus');
 
 let currentTime = 1500;
 
@@ -50,6 +52,20 @@ reset.addEventListener('click', () => {
     time.innerText = formatTime(currentTime);
     clearInterval(intervalID);
 })
+
+plus.addEventListener('click', () => {
+    currentTime += 300;
+    console.log(currentTime);
+    time.innerText = formatTime(currentTime);
+})
+
+minus.addEventListener('click', () => {
+    currentTime -= 300;
+    time.innerText = formatTime(currentTime);
+})
+
+
+
 
 let alarm
 function playAlarm() {
