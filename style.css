@@ -11,7 +11,7 @@ body {
 .container {
     justify-content: center;
     min-width: 340px;
-    max-width: 500px;
+    max-width: 450px;
     background-color: lightblue;
     padding: 1rem;
     border-radius: 1rem;
