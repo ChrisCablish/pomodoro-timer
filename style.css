@@ -1,40 +1,55 @@
 body {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
 
-
 .container {
-    width: 25%;
+    justify-content: center;
+    min-width: 340px;
+    max-width: 500px;
     background-color: lightblue;
     padding: 1rem;
     border-radius: 1rem;
-
-}
-.time__container {
-    text-align: center;
-}
-
-.col-sm {
     
+}
+
+.col {
     display: flex;
     justify-content: center;
 }
 
-button {
-    font-weight: 600;
-    padding: 1rem 2rem;
+.col__start {
+    justify-content: flex-start;
 }
 
-span {
-    font-weight: 300;
-    font-size: 4rem;
+.col__reset {
+    justify-content: flex-end;
 }
 
+span.time {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.minus__col {
+    display: flex;
+    justify-content: flex-start;
+}
 .plus__col {
     display: flex;
     justify-content: flex-end;
 }
+
+
+    
+
+
+
+
+
 
