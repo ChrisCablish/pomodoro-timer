@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.container {
+    width: 25%;
+    background-color: lightblue;
+    padding: 1rem;
+    border-radius: 1rem;
+
+}
+.time__container {
+    text-align: center;
+}
+
+.col-sm {
+    
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-weight: 600;
+    padding: 1rem 2rem;
+}
+
+span {
+    font-weight: 300;
+    font-size: 4rem;
+}
+
