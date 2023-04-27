@@ -46,6 +46,9 @@ start.addEventListener('click', () => {
 pause.addEventListener('click', () => {
     start.disabled = false;
     pause.disabled = true;
+    if (currentTime === 0) {
+        alarm.pause();
+    }
     clearInterval(intervalID);
 })
 
