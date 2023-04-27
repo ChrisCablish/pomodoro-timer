@@ -5,7 +5,7 @@ const reset = document.getElementById('reset');
 const plus = document.getElementById('plus');
 const minus = document.getElementById('minus');
 
-let currentTime = 1500;
+let currentTime = 3;
 
 time.innerText = formatTime(currentTime);
 let intervalID
@@ -33,7 +33,14 @@ function startTimer() {
 start.addEventListener('click', () => { 
     start.disabled = true;
     pause.disabled = false;
-    startTimer();
+    
+
+    if (currentTime ===0 ) {
+        clearInterval(intervalID);
+        playAlarm();
+    } else {
+        startTimer();
+    }
 });
 
 pause.addEventListener('click', () => {
@@ -60,18 +67,23 @@ plus.addEventListener('click', () => {
 })
 
 minus.addEventListener('click', () => {
-    currentTime -= 300;
-    time.innerText = formatTime(currentTime);
+
+    if (currentTime > 0) {
+        currentTime -= 300;
+        time.innerText = formatTime(currentTime);
+    }
 })
-
-
-
 
 let alarm
 function playAlarm() {
-    alarm = new Audio('/audio/mixkit-scanning-sci-fi-alarm-905.wav');
+    alarm = new Audio('/audio/mixkit-alarm-digital-clock-beep-989.wav');
     alarm.play();
+    console.log('play alarm called');
   }
+
+
+
+
 
 
 
