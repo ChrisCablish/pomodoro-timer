@@ -5,7 +5,7 @@ const reset = document.getElementById('reset');
 const plus = document.getElementById('plus');
 const minus = document.getElementById('minus');
 
-let currentTime = 3;
+let currentTime = 1500;
 
 time.innerText = formatTime(currentTime);
 let intervalID
